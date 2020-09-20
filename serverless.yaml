@@ -1,0 +1,23 @@
+service: cobol-lambda
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: provided
+
+# you can overwrite defaults here
+#  stage: dev
+#  region: us-east-1
+
+## Todo make a deployment build script
+package:
+  include:
+    - lib/**
+    - hello
+    - bootstrap
+
+functions:
+  hello:
+    handler: ./hello
+    events:
+      - http: GET /
