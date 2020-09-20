@@ -30,4 +30,6 @@ sls deploy
 curl --silent https://<your api gateway id>.us-east-1.amazonaws.com/dev/
 ```
 
-
+### Cleanup
+To cleanup your AWS resources run:
+`serverless remove`
