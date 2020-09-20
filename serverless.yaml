@@ -3,13 +3,9 @@ frameworkVersion: '2'
 
 provider:
   name: aws
+  # We provide our own runtime in the bootstrap file
   runtime: provided
 
-# you can overwrite defaults here
-#  stage: dev
-#  region: us-east-1
-
-## Todo make a deployment build script
 package:
   include:
     - lib/**

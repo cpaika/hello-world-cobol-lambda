@@ -2,8 +2,7 @@
 
 set -euo pipefail
 
-export LD_LIBRARY_PATH=/usr/local/lib
-# Processing
+# Processing Loop
 while true
 do
   echo "looping"
@@ -17,18 +16,15 @@ do
   # Execute the handler function from the script
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$LAMBDA_TASK_ROOT/lib
   RESPONSE=$($_HANDLER)
-
-  echo "Response: $RESPONSE"
-
+  
+  # Necessary API Gateway response format
   JSON_RESPONSE='
   {
     "isBase64Encoded": false,
     "statusCode": 200, 
     "body": "'"$RESPONSE"'" 
   }'
-  echo "JSON_RESPONSE: $JSON_RESPONSE"
 
   # Send the response
-  echo "curl: curl -X POST "http://${AWS_LAMBDA_RUNTIME_API}/2018-06-01/runtime/invocation/$REQUEST_ID/response"  -d "$JSON_RESPONSE""
   curl -X POST "http://${AWS_LAMBDA_RUNTIME_API}/2018-06-01/runtime/invocation/$REQUEST_ID/response"  -d "${JSON_RESPONSE}"
 done
