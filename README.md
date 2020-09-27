@@ -1,5 +1,5 @@
 ## Hello World Cobol with AWS Lambda
-This repository contains a 'Hello World' COBOL program that can deploy and run on AWS Lambda, fronted by an API Gateway.
+This repository contains a 'Hello World' COBOL program that can deploy and run on AWS Lambda, fronted by an API Gateway.  This is the companion code for my [blog post](https://paika.tech/blog/2020/09/27/running-cobol-on-aws-lambda.html) on the topic.
 
 ### Prerequisites
 We need the following tools to run and deploy this application: [GnuCOBOL](https://sourceforge.net/projects/gnucobol/), [Serverless Framework](https://www.serverless.com/), and [Docker](https://www.docker.com/)
