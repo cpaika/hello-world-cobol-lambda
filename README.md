@@ -1,4 +1,4 @@
-## Hello World Cobol Lambda
+## Hello World Cobol - with AWS Lambda
 This repository contains a 'Hello World' COBOL program that can deploy and run on AWS Lambda, fronted by an API Gateway.
 
 ### Prerequisites
