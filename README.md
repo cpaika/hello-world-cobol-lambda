@@ -1,10 +1,15 @@
 ## Hello World Cobol Lambda
-This repository contains a hello world COBOL program tht you can execute on AWS Lambda
+This repository contains a 'Hello World' COBOL program that can deploy and run on AWS Lambda, fronted by an API Gateway.
+
+### Prerequisites
+We need the following tools to run and deploy this application: [GnuCOBOL](https://sourceforge.net/projects/gnucobol/), [Serverless Framework](https://www.serverless.com/), and [Docker](https://www.docker.com/)
+
+On MacOS you can use [Homebrew](https://brew.sh/) to install them:
+1.  `brew install gnu-cobol`
+1.  `brew install docker`
+1.  `brew install serverless`
 
 ### Running Locally
-1. Install [GnuCOBOL](https://sourceforge.net/projects/gnucobol/)
-On MacOS, you can use [Homebrew](https://brew.sh/):
-` brew install gnu-cobol`
 1. Build the application:
 ```bash
 cobc -x hello.cob
